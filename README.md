@@ -118,26 +118,6 @@ The notebook includes two visualizations:
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-```bash
-pip install torch matplotlib jupyter
-```
-
-### Run the Notebook
-
-```bash
-git clone https://github.com/MaitriVaghela/character-level-language-model-mlp.git
-cd character-level-language-model-mlp
-git checkout mlp
-jupyter notebook language-model-mlp.ipynb
-```
-
-> **Note:** The notebook was originally run on Kaggle. To run locally, update the dataset path from `/kaggle/input/datasets/maitrivaghela/namesdata/names_makemore.txt` to your local path.
-
----
 
 ## Project Structure
 
@@ -167,8 +147,3 @@ character-level-language-model-mlp/
 - [PyTorch Documentation](https://pytorch.org/docs/)
 
 ---
-
-## Author
-
-**Maitri Vaghela**  
-[GitHub Profile](https://github.com/MaitriVaghela)
