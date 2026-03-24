@@ -2,7 +2,6 @@
 
 A character-level language model built with a Multi-Layer Perceptron (MLP) that predicts the next character in a sequence given a fixed context window of 3 previous characters. Implemented in PyTorch on a names dataset.
 
-> Inspired by Andrej Karpathy's *makemore* series on building language models from scratch.
 
 ---
 
