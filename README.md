@@ -2,7 +2,6 @@
 
 A character-level language model built with a Multi-Layer Perceptron (MLP) that predicts the next character in a sequence given a fixed context window of 3 previous characters. Implemented in PyTorch on a names dataset.
 
-
 ---
 
 ## Overview
@@ -49,11 +48,11 @@ Softmax  →  Probability distribution over 27 characters
 The model is trained on a dataset of names (`names_makemore.txt`), where each name is a sequence of characters. The `.` token is used as a special start/end-of-word marker.
 
 **Dataset split:**
-| Split      | Size  | Purpose                              |
-|------------|-------|--------------------------------------|
-| Training   | 80%   | Train model weights                  |
-| Validation | 10%   | Tune hyperparameters, check overfitting |
-| Test       | 10%   | Final evaluation                     |
+| Split      | Size   | Purpose                                 |
+|------------|--------|-----------------------------------------|
+| Training   | 80%    | Train model weights                     |
+| Validation | 10%    | Tune hyperparameters, check overfitting |
+| Test       | 10%    | Final evaluation                        |
 
 **Training set size:** 182,625 examples  
 **Validation set size:** 22,655 examples  
@@ -93,7 +92,7 @@ mma → .
   - `lr = 0.01` for the remaining 100,000 steps
 
 ### 4. Evaluation
-The model is evaluated on the **validation set** by computing cross-entropy loss to detect overfitting. The final **validation loss is ~2.18**.
+The model is evaluated on the **validation set** by computing cross-entropy loss to detect overfitting. The final **validation loss is ~2.16**.
 
 ### 5. Text Generation
 After training, names are generated **autoregressively**:
@@ -103,8 +102,8 @@ After training, names are generated **autoregressively**:
 
 **Sample generated names:**
 ```
-carpazlaylyn   jari   reety   deliah
-nerania        kaleigh   quint   kai
+carman     ambrilli   kimis      kaeli
+nellara    chaiir     kaleigh    quinn
 ```
 
 ---
@@ -114,20 +113,10 @@ nerania        kaleigh   quint   kai
 The notebook includes two visualizations:
 
 1. **Training loss curve** — plots log10 loss over 200,000 training steps, showing convergence.
-2. **Embedding space** — scatter plot of the learned 2D character embeddings (projected from 10D), showing how the model clusters similar characters together.
+2. **Embedding space** — scatter plot of the learned 2D character embeddings, showing how the model organizes characters in space.
 
 ---
 
-
-## Project Structure
-
-```
-character-level-language-model-mlp/
-│
-└── language-model-mlp.ipynb   # Full implementation: data prep, training, evaluation, generation
-```
-
----
 
 ## Key Concepts
 
@@ -147,3 +136,4 @@ character-level-language-model-mlp/
 - [PyTorch Documentation](https://pytorch.org/docs/)
 
 ---
+
